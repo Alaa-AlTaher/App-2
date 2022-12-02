@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/RateUs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="181dp"
+        android:layout_marginTop="105dp"
+        android:layout_marginEnd="182dp"
+        android:text="Rate Us!"
+        android:textColor="@color/teal_700"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/RatingRadioGroup"
+        android:layout_width="400dp"
+        android:layout_height="442dp"
+        android:padding="25dp"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="34dp">
+
+        <RadioButton
+            android:id="@+id/excellent"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="71dp"
+            android:layout_marginTop="160dp"
+            android:layout_marginEnd="231dp"
+            android:text="Excellent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RateUs" />
+
+        <RadioButton
+            android:id="@+id/vgood"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="71dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="231dp"
+            android:text="Very Good"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/excellent" />
+
+        <RadioButton
+            android:id="@+id/good"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="71dp"
+            android:layout_marginEnd="231dp"
+            android:text="Good"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vgood" />
+
+        <RadioButton
+            android:id="@+id/satis"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="71dp"
+            android:layout_marginEnd="231dp"
+            android:text="Satisfactory"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/good" />
+
+        <RadioButton
+            android:id="@+id/bad"
+            android:layout_width="109dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="71dp"
+            android:layout_marginEnd="231dp"
+            android:text="Bad"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/satis" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="16dp"
+        android:text="Cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RatingRadioGroup" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="72dp"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnCancel"
+        app:layout_constraintTop_toBottomOf="@+id/RatingRadioGroup" />
+</androidx.constraintlayout.widget.ConstraintLayout>
