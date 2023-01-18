@@ -6,88 +6,95 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/RateUs"
+        android:id="@+id/mostUsed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="181dp"
         android:layout_marginTop="105dp"
         android:layout_marginEnd="182dp"
-        android:text="Rate Us!"
-        android:textColor="@color/teal_700"
+        android:text="What is your most Used Currency??"
+        android:textColor="#F1246A"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
-        android:id="@+id/RatingRadioGroup"
+
+        android:id="@+id/MostUsedRadioGroup"
         android:layout_width="400dp"
         android:layout_height="442dp"
         android:padding="25dp"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="34dp">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="5dp">
 
         <RadioButton
-            android:id="@+id/excellent"
-            android:layout_width="123dp"
+            android:id="@+id/JOD"
+            android:layout_width="192dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="71dp"
             android:layout_marginTop="160dp"
             android:layout_marginEnd="231dp"
-            android:text="Excellent"
+            android:text="JOD"
+            android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/RateUs" />
+            app:layout_constraintTop_toBottomOf="@+id/mostUsed" />
 
         <RadioButton
-            android:id="@+id/vgood"
-            android:layout_width="123dp"
+            android:id="@+id/USD"
+            android:layout_width="192dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="71dp"
             android:layout_marginTop="1dp"
             android:layout_marginEnd="231dp"
-            android:text="Very Good"
+            android:text="USD"
+            android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/excellent" />
+            app:layout_constraintTop_toBottomOf="@+id/JOD" />
 
         <RadioButton
-            android:id="@+id/good"
-            android:layout_width="120dp"
+            android:id="@+id/EURO"
+            android:layout_width="192dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="71dp"
             android:layout_marginEnd="231dp"
-            android:text="Good"
+            android:text="EURO"
+            android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/vgood" />
+            app:layout_constraintTop_toBottomOf="@+id/USD" />
 
         <RadioButton
-            android:id="@+id/satis"
-            android:layout_width="123dp"
+            android:id="@+id/RUBLE"
+            android:layout_width="193dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="71dp"
             android:layout_marginEnd="231dp"
-            android:text="Satisfactory"
+            android:text="RUBLE"
+            android:textAlignment="center"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/good" />
+            app:layout_constraintTop_toBottomOf="@+id/EURO" />
 
         <RadioButton
-            android:id="@+id/bad"
-            android:layout_width="109dp"
+            android:id="@+id/Other"
+            android:layout_width="192dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="71dp"
             android:layout_marginEnd="231dp"
-            android:text="Bad"
+            android:text="Other"
+            android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/satis" />
+            app:layout_constraintTop_toBottomOf="@+id/RUBLE" />
 
     </RadioGroup>
 
@@ -95,11 +102,14 @@
         android:id="@+id/btnCancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
+        android:layout_marginStart="92dp"
         android:layout_marginTop="16dp"
+        android:backgroundTint="#1A8CEF"
         android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RatingRadioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/MostUsedRadioGroup"
+        app:layout_constraintVertical_bias="0.071" />
 
     <Button
         android:id="@+id/btnSubmit"
@@ -108,9 +118,12 @@
         android:layout_marginStart="84dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="72dp"
+        android:backgroundTint="#1A8CEF"
         android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/btnCancel"
-        app:layout_constraintTop_toBottomOf="@+id/RatingRadioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/MostUsedRadioGroup"
+        app:layout_constraintVertical_bias="0.071" />
 </androidx.constraintlayout.widget.ConstraintLayout>

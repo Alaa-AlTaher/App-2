@@ -16,9 +16,9 @@ class MainActivity : AppCompatActivity() {
         val txtEdit: EditText = findViewById(R.id.edtxtValue);
         val txtView: TextView = findViewById(R.id.txtResult);
 
-        var flag:String = "kg to lb";
+        var flag:String = "USD to Jod";
         val spinner: Spinner = findViewById(R.id.spUnit);
-        var options = arrayOf("kg to lb","lb to kg","km to mile","mile to km","m to ft","ft to m","cm to inch","inch to cm");
+        var options = arrayOf("USD to Jod","Jod to USD","USD to Euro","Euro to USD","USD to Ruble","Ruble to USD");
 
         spinner.adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,options);
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
@@ -35,14 +35,13 @@ class MainActivity : AppCompatActivity() {
             var value:Double = txtEdit.text.toString().toDouble();
 
             when(flag){
-                "kg to lb"-> txtView.text = String.format("%.2f",(value*2.2).toBigDecimal()) + " lb";
-                "lb to kg"-> txtView.text = String.format("%.2f",(value/2.2).toBigDecimal()) + " kg";
-                "km to mile"-> txtView.text = String.format("%.2f",(value/1.609344).toBigDecimal())  + " mile";
-                "mile to km"-> txtView.text = String.format("%.2f",(value*1.609344).toBigDecimal())  + " km";
-                "m to ft"-> txtView.text = String.format("%.2f",(value*3.28084).toBigDecimal())  + " ft";
-                "ft to m"-> txtView.text = String.format("%.2f",(value/3.28084).toBigDecimal())  + " m";
-                "cm to inch"-> txtView.text = String.format("%.2f",(value*0.393701).toBigDecimal())  + " inch";
-                "inch to cm"-> txtView.text = String.format("%.2f",(value/0.393701).toBigDecimal())  + " cm";
+                "USD to Jod"-> txtView.text = String.format("%.2f",(value*0.7).toBigDecimal()) + " Jod";
+                "Jod to USD"-> txtView.text = String.format("%.2f",(value*1.41).toBigDecimal()) + " USD";
+                "USD to Euro"-> txtView.text = String.format("%.2f",(value*0.92).toBigDecimal())  + " Euro";
+                "Euro to USD"-> txtView.text = String.format("%.2f",(value*1.08).toBigDecimal())  + " USD";
+                "USD to Ruble"-> txtView.text = String.format("%.2f",(value*68.95).toBigDecimal())  + " Ruble";
+                "Ruble to USD"-> txtView.text = String.format("%.2f",(value*0.015).toBigDecimal())  + " USD";
+
 
             }
         }
@@ -55,10 +54,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        var dialog_rate = RateFragment()
+        var dialog_rate = UsedFragment()
         var dialog_contact = ContactFragment()
         when(item.itemId){
-            R.id.Rate -> dialog_rate.show(supportFragmentManager, "rate Dialog")
+            R.id.Currancy -> dialog_rate.show(supportFragmentManager, "rate Dialog")
             R.id.Contact -> dialog_contact.show(supportFragmentManager, "contact Dialog")
         }
         return true;

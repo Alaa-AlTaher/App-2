@@ -8,23 +8,21 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:contentDescription="logo"
-        android:src="@drawable/ic_baseline_architecture_24"
+        android:layout_width="361dp"
+        android:layout_height="274dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="logop"
+        android:src="@drawable/logoppp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ImageContrastCheck"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:ignore="ImageContrastCheck" />
 
     <Spinner
         android:id="@+id/spUnit"
-        android:layout_width="345dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="263dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSpLabel" />
@@ -33,20 +31,20 @@
         android:id="@+id/txtSpLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="36dp"
         android:labelFor="@id/spUnit"
-        android:text="Choose units"
+        android:text="Choose currency"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo" />
+        app:layout_constraintTop_toBottomOf="@+id/edtxtValue" />
 
     <EditText
         android:id="@+id/edtxtValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="217dp"
+        android:layout_height="41dp"
         android:layout_marginStart="101dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="101dp"
         android:ems="10"
         android:hint="enter unit value"
@@ -55,33 +53,42 @@
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spUnit" />
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <TextView
         android:id="@+id/txtResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="97dp"
+        android:layout_height="43dp"
         android:layout_marginStart="183dp"
-        android:layout_marginTop="51dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="183dp"
+        android:enabled="false"
         android:text="Result"
-        android:textColor="#3F51B5"
-        android:textSize="16sp"
+
+        android:textAlignment="center"
+        android:textColor="#D61A1A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtxtValue" />
+        app:layout_constraintTop_toBottomOf="@+id/btnGo"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnGo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="161dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="162dp"
+        android:backgroundTint="#D61A1A"
         android:text="Go"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtResult" />
+        app:layout_constraintTop_toBottomOf="@+id/spUnit" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
